@@ -1,14 +1,32 @@
-CREATE TABLE department (
-    department_id INT PRIMARY KEY AUTO_INCREMENT,
-    department_name VARCHAR(50) NOT NULL UNIQUE
-);
+import java.sql.*;
+public class database_test
+{
+    int test ; 
+  public static void main(String []args) {
+   try{
+     //      mariadb changeto(sql)             database_name
+    String url = "jdbc:mariadb://localhost:3306/dinu";
+    String username = "oop"; 
+    String password= "dinu";
+     
+    Connection con=DriverManager.getConnection(url,username,password);
+    System.out.println("sucessfull");
 
-CREATE TABLE doctor (
-    doctor_id INT PRIMARY KEY AUTO_INCREMENT,
-    doctor_name VARCHAR(100),
-    department_id INT ,
-    status VARCHAR(20)DEFAULT 'Offline',
-    FOREIGN KEY (department_id)
-        REFERENCES Department(department_id),
-   )
-);
+
+   Statement st = con.createStatement();
+   ResultSet r=st.executeQuery("SELECT * FROM  hey");
+   int a;
+   while(r.next())
+   {
+   a=r.getInt(1);
+   System.out.println(a);
+   }
+
+
+   }
+   catch(SQLException e){
+     System.out.println("not working ");
+   }
+
+     }
+}
