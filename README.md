@@ -8,3 +8,4 @@ project
 sudo apt install default-mysql-server
 
 
+test
