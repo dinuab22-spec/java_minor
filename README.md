@@ -5,3 +5,6 @@ project
 //installed mariadb database
 
 
+sudo apt install default-mysql-server
+
+
