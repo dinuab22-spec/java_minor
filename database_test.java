@@ -1,6 +1,4 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 public class database_test
 {
     int test ; 
@@ -12,13 +10,23 @@ public class database_test
     String password= "dinu";
      
     Connection con=DriverManager.getConnection(url,username,password);
-     
     System.out.println("sucessfull");
+
+
+   Statement st = con.createStatement();
+   ResultSet r=st.executeQuery("SELECT * FROM  hey");
+   int a;
+   while(r.next())
+   {
+   a=r.getInt(1);
+   System.out.println(a);
+   }
+
 
    }
    catch(SQLException e){
      System.out.println("not working ");
    }
 
-  }
+     }
 }
