@@ -19,5 +19,10 @@ EXIT;
 //driver for maria and mysql debian(linux)
 
 sudo apt install libmariadb-java
-  ->setting alias(path to mariadb)
-         alias jb="java -cp .:/usr/share/java/mariadb-java-client.jar"
+
+
+
+//setting alias(path to mariadb)
+
+//zshrc or bashrc
+ alias jb="java -cp .:/usr/share/java/mariadb-java-client.jar"
