@@ -7,7 +7,7 @@
 sudo apt install default-mysql-server
 
 
-//creating a user name oop and pass 
+//creating a user name oop and pass dinu for mariadb
 
 CREATE USER 'oop'@'localhost' IDENTIFIED BY 'dinu';
 GRANT ALL PRIVILEGES ON *.* TO 'oop'@'localhost';
